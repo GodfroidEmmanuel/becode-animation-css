@@ -41,7 +41,7 @@ Le résultat :
 
 ### Auteur
 
-Github page :
+Github page : https://godfroidemmanuel.github.io/becode-animation-css/
 
 Godfroid Emmanuel
 
