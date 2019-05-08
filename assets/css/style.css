@@ -28,6 +28,22 @@ body {
   transition: background-color 0.4s linear;
 }
 
+.icons a:hover {
+  background-color: white;
+}
+
+.icons a:hover + p {
+  background-color: grey;
+  opacity: 1;
+  -webkit-transform: translateX(114px);
+      -ms-transform: translateX(114px);
+          transform: translateX(114px);
+}
+
+.icons .etr {
+  padding-right: 45.5px;
+}
+
 .icons p {
   padding: 48px;
   padding-top: 30px;
@@ -44,18 +60,6 @@ body {
   opacity: 0;
   pointer-events: none;
   padding-top: 33px;
-}
-
-.icons a:hover {
-  background-color: white;
-}
-
-.icons a:hover + p {
-  background-color: grey;
-  opacity: 1;
-  -webkit-transform: translateX(114px);
-      -ms-transform: translateX(114px);
-          transform: translateX(114px);
 }
 
 nav {
@@ -182,13 +186,28 @@ nav {
   margin-top: 15%;
   background-color: black;
   overflow: hidden;
-  margin-bottom: 20%;
+  margin-bottom: 15%;
 }
 
 .card:hover {
   box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
   -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
   -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
+}
+
+.card:hover .picture img {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.card:hover .content {
+  height: 350px;
+}
+
+.card:hover .hidden {
+  opacity: 1;
 }
 
 .picture img {
@@ -198,13 +217,6 @@ nav {
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-}
-
-.card:hover .picture img {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-  opacity: 0.5;
 }
 
 .date {
@@ -231,10 +243,6 @@ nav {
   -webkit-transition: height .2s ease-in-out;
   -o-transition: height .2s ease-in-out;
   transition: height .2s ease-in-out;
-}
-
-.card:hover .content {
-  height: 350px;
 }
 
 .sub1 {
@@ -268,10 +276,6 @@ nav {
   margin-right: auto;
   opacity: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.card:hover .hidden {
-  opacity: 1;
 }
 
 footer {

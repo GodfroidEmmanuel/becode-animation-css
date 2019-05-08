@@ -16,46 +16,49 @@ body {
 
 .icons {
   display: flex;
-
+  a {
+    padding: 40px;
+    background-color: #343834;
+    color: orange;
+    font-size: 30px;
+    text-decoration: none;
+    transition: background-color 0.4s linear;
+    &:hover {
+      background-color: white;
+    }
+    
+    &:hover+p {
+      background-color: grey;
+      opacity: 1;
+      transform: translateX(114px);
+    }
+    
+  
+  }
+  .etr {
+    padding-right: 45.5px;
+  }
+  p {
+    padding: 48px;
+    padding-top: 30px;
+    padding-bottom: 59px;
+    padding-right: 40px;
+    transition: opacity 0.4s linear, transform 0.4s ease-out;
+    color: white;
+    margin: 0;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    padding-top: 33px;
+  }
 }
 
 
-.icons a {
-  padding: 40px;
-  background-color: #343834;
-  color: orange;
-  font-size: 30px;
-  text-decoration: none;
-  transition: background-color 0.4s linear;
 
 
-}
-
-.icons p {
-  padding: 48px;
-  padding-top: 30px;
-  padding-bottom: 59px;
-  padding-right: 40px;
-  transition: opacity 0.4s linear, transform 0.4s ease-out;
-  color: white;
-  margin: 0;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  padding-top: 33px;
 
 
-}
 
-.icons a:hover {
-  background-color: white;
-}
-
-.icons a:hover+p {
-  background-color: grey;
-  opacity: 1;
-  transform: translateX(114px);
-}
 
 nav {
   grid-area: n;
@@ -85,8 +88,6 @@ nav {
   margin-right: auto;
   padding: 30px;
   margin-top: 5%;
-
-
   transition-property: background-color, color, transform;
   transition-timing-function: linear;
   transition-duration: 0.8s;
@@ -132,14 +133,28 @@ nav {
   margin-top: 15%;
   background-color: black;
   overflow: hidden;
-margin-bottom: 20%;
+  margin-bottom: 15%;
 
+  &:hover {
+    box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
+  }
+
+  &:hover .picture img {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+
+  &:hover .content {
+    height: 350px;
+  }
+
+  &:hover .hidden {
+    opacity: 1;
+  }
 }
-.card:hover {
-  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
--moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
--webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.4);
-}
+
 
 .picture img {
   position: absolute;
@@ -148,27 +163,21 @@ margin-bottom: 20%;
   transition: all .2s ease-in-out;
 }
 
-.card:hover .picture img {
-  transform: scale(1.2);
-  opacity: 0.5;
-  
-}
-
 .date {
   position: absolute;
   background-color: orangered;
   color: white;
   border-radius: 50%;
-
   width: 17%;
   height: 64px;
   right: 5%;
   top: 3%;
+    p {
+      text-align: center;
+    }
 }
 
-.date p {
-  text-align: center;
-}
+
 
 .content {
   position: absolute;
@@ -178,13 +187,10 @@ margin-bottom: 20%;
   background-color: white;
   transition: height .2s ease-in-out;
 }
-.card:hover .content {
-  height: 350px;
 
-}
 
 .sub1 {
-  
+
   width: 20%;
   height: 30px;
   margin-top: -7%;
@@ -194,20 +200,23 @@ margin-bottom: 20%;
   padding-top: 10px;
 }
 
-
-.title h1 {
+.title{
+h1 {
   margin-left: 10%;
   font-size: 50px;
   letter-spacing: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+  p {
+    margin-left: 12%;
+    font-size: 25px;
+    margin-top: -18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-.title p {
-  margin-left: 12%;
-  font-size: 25px;
-  margin-top: -18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 .hidden {
   width: 75%;
@@ -217,9 +226,7 @@ margin-bottom: 20%;
   opacity: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.card:hover .hidden {
-  opacity: 1;
-}
+
 
 footer {
   position: relative;
@@ -228,10 +235,9 @@ footer {
   color: black;
   top: 92%;
   left: 10%;
-  
+  i {
+    margin-left: 5%;
+    color: black;
+  }
 }
 
-footer i {
-  margin-left: 5%;
-  color: black;
-}
